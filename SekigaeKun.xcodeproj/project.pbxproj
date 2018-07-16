@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		CD1E02F220FC7C8E00148129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E02F120FC7C8E00148129 /* AppDelegate.swift */; };
-		CD1E02F420FC7C8F00148129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E02F320FC7C8F00148129 /* ViewController.swift */; };
-		CD1E02F720FC7C8F00148129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1E02F520FC7C8F00148129 /* Main.storyboard */; };
 		CD1E02F920FC7C9200148129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1E02F820FC7C9200148129 /* Assets.xcassets */; };
 		CD1E02FC20FC7C9200148129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1E02FA20FC7C9200148129 /* LaunchScreen.storyboard */; };
+		CD1E030620FCD63100148129 /* SekigaeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030520FCD63100148129 /* SekigaeViewController.swift */; };
+		CD1E030820FCD69000148129 /* SekigaeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1E030720FCD69000148129 /* SekigaeViewController.storyboard */; };
+		CD1E030A20FCD8E100148129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030920FCD8E100148129 /* Extensions.swift */; };
+		CD1E030C20FCD92C00148129 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030B20FCD92C00148129 /* Member.swift */; };
+		CD1E030E20FCD9DA00148129 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */; };
+		CD1E031020FCEDD300148129 /* MemberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030F20FCEDD300148129 /* MemberManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD1E02EE20FC7C8E00148129 /* SekigaeKun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SekigaeKun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1E02F120FC7C8E00148129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD1E02F320FC7C8F00148129 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD1E02F620FC7C8F00148129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD1E02F820FC7C9200148129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1E02FB20FC7C9200148129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1E02FD20FC7C9200148129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1E030520FCD63100148129 /* SekigaeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekigaeViewController.swift; sourceTree = "<group>"; };
+		CD1E030720FCD69000148129 /* SekigaeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SekigaeViewController.storyboard; sourceTree = "<group>"; };
+		CD1E030920FCD8E100148129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CD1E030B20FCD92C00148129 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
+		CD1E030F20FCEDD300148129 /* MemberManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				CD1E02F120FC7C8E00148129 /* AppDelegate.swift */,
-				CD1E02F320FC7C8F00148129 /* ViewController.swift */,
-				CD1E02F520FC7C8F00148129 /* Main.storyboard */,
 				CD1E02F820FC7C9200148129 /* Assets.xcassets */,
 				CD1E02FA20FC7C9200148129 /* LaunchScreen.storyboard */,
 				CD1E02FD20FC7C9200148129 /* Info.plist */,
+				CD1E030520FCD63100148129 /* SekigaeViewController.swift */,
+				CD1E030720FCD69000148129 /* SekigaeViewController.storyboard */,
+				CD1E030920FCD8E100148129 /* Extensions.swift */,
+				CD1E030B20FCD92C00148129 /* Member.swift */,
+				CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */,
+				CD1E030F20FCEDD300148129 /* MemberManager.swift */,
 			);
 			path = SekigaeKun;
 			sourceTree = "<group>";
@@ -122,9 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1E030820FCD69000148129 /* SekigaeViewController.storyboard in Resources */,
 				CD1E02FC20FC7C9200148129 /* LaunchScreen.storyboard in Resources */,
 				CD1E02F920FC7C9200148129 /* Assets.xcassets in Resources */,
-				CD1E02F720FC7C8F00148129 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +147,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1E02F420FC7C8F00148129 /* ViewController.swift in Sources */,
+				CD1E030620FCD63100148129 /* SekigaeViewController.swift in Sources */,
+				CD1E030A20FCD8E100148129 /* Extensions.swift in Sources */,
 				CD1E02F220FC7C8E00148129 /* AppDelegate.swift in Sources */,
+				CD1E031020FCEDD300148129 /* MemberManager.swift in Sources */,
+				CD1E030E20FCD9DA00148129 /* MemberTableViewController.swift in Sources */,
+				CD1E030C20FCD92C00148129 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CD1E02F520FC7C8F00148129 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD1E02F620FC7C8F00148129 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD1E02FA20FC7C9200148129 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
