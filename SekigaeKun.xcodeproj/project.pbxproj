@@ -16,6 +16,10 @@
 		CD1E030C20FCD92C00148129 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030B20FCD92C00148129 /* Member.swift */; };
 		CD1E030E20FCD9DA00148129 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */; };
 		CD1E031020FCEDD300148129 /* MemberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030F20FCEDD300148129 /* MemberManager.swift */; };
+		CD1E031220FE2A2400148129 /* SeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1E031120FE2A2400148129 /* SeatView.xib */; };
+		CD1E031420FE2A4500148129 /* SeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E031320FE2A4500148129 /* SeatView.swift */; };
+		CD1E031620FE3FBF00148129 /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E031520FE3FBF00148129 /* MemberView.swift */; };
+		CD1E031820FE405B00148129 /* MemberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1E031720FE405B00148129 /* MemberView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		CD1E030B20FCD92C00148129 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		CD1E030F20FCEDD300148129 /* MemberManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberManager.swift; sourceTree = "<group>"; };
+		CD1E031120FE2A2400148129 /* SeatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatView.xib; sourceTree = "<group>"; };
+		CD1E031320FE2A4500148129 /* SeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatView.swift; sourceTree = "<group>"; };
+		CD1E031520FE3FBF00148129 /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
+		CD1E031720FE405B00148129 /* MemberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 				CD1E030B20FCD92C00148129 /* Member.swift */,
 				CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */,
 				CD1E030F20FCEDD300148129 /* MemberManager.swift */,
+				CD1E031120FE2A2400148129 /* SeatView.xib */,
+				CD1E031320FE2A4500148129 /* SeatView.swift */,
+				CD1E031520FE3FBF00148129 /* MemberView.swift */,
+				CD1E031720FE405B00148129 /* MemberView.xib */,
 			);
 			path = SekigaeKun;
 			sourceTree = "<group>";
@@ -135,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD1E030820FCD69000148129 /* SekigaeViewController.storyboard in Resources */,
+				CD1E031220FE2A2400148129 /* SeatView.xib in Resources */,
 				CD1E02FC20FC7C9200148129 /* LaunchScreen.storyboard in Resources */,
+				CD1E031820FE405B00148129 /* MemberView.xib in Resources */,
 				CD1E02F920FC7C9200148129 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +165,9 @@
 				CD1E030A20FCD8E100148129 /* Extensions.swift in Sources */,
 				CD1E02F220FC7C8E00148129 /* AppDelegate.swift in Sources */,
 				CD1E031020FCEDD300148129 /* MemberManager.swift in Sources */,
+				CD1E031420FE2A4500148129 /* SeatView.swift in Sources */,
 				CD1E030E20FCD9DA00148129 /* MemberTableViewController.swift in Sources */,
+				CD1E031620FE3FBF00148129 /* MemberView.swift in Sources */,
 				CD1E030C20FCD92C00148129 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
