@@ -12,6 +12,10 @@ class SekigaeViewController: UIViewController {
 
     private var manager = MemberManager.sharedInstance
     private var seatViews: [SeatView] = []
+    private var memberViews: [MemberView] = []
+
+    private let memberViewWidth: CGFloat = 50
+    private let seatNameHeight: CGFloat = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +44,7 @@ class SekigaeViewController: UIViewController {
         for i in seatViews.count..<manager.members.count {
             let seat = SeatView.instantiate()
             seat.number = i
-            seat.frame = CGRect(x: i*10, y: i*10, width: 50, height: 70)
+            seat.frame = CGRect(x: CGFloat(i*10), y: CGFloat(i*10), width: memberViewWidth, height: memberViewWidth+CGFloat(20))
             view.addSubview(seat)
             seatViews.append(seat)
         }
@@ -49,6 +53,73 @@ class SekigaeViewController: UIViewController {
     @objc func didTapMemberButton() {
         present(UINavigationController(rootViewController: MemberTableViewController()), animated: true, completion: nil)
     }
+
+    @IBAction func didTouchUpInsideSekigaeButton(_ sender: UIButton) {
+
+        let members = manager.members
+
+        if memberViews.count != seatViews.count {
+            memberViews.forEach{ $0.removeFromSuperview() }
+            memberViews = []
+
+            members.forEach{
+                let memberView = MemberView.instantiate()
+                memberView.frame = CGRect(origin: CGPoint(x: (self.view.frame.width - memberViewWidth) / 2, y:  (self.view.frame.height - memberViewWidth) / 2), size: CGSize(width: memberViewWidth, height: memberViewWidth))
+                memberView.member = $0
+                self.view.addSubview(memberView)
+                memberViews.append(memberView)
+            }
+        }
+
+        memberViews.shuffle()
+        
+        for (i, view) in memberViews.enumerated() {
+            UIView.animate(withDuration: 0.3, animations: {
+                view.center = self.seatViews[i].memberView.center
+                view.frame.origin.x = self.seatViews[i].frame.origin.x
+                view.frame.origin.y = self.seatViews[i].frame.origin.y + self.seatNameHeight
+            })
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

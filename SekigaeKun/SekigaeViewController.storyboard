@@ -28,6 +28,9 @@
                                 <state key="normal" title="席替え！">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTouchUpInsideSekigaeButton:" destination="Dkg-aA-AIB" eventType="touchUpInside" id="wVH-s4-dO0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

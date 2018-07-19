@@ -12,6 +12,7 @@ class SeatView: UIView {
 
     @IBOutlet weak var seatLabel: UILabel!
     @IBOutlet weak var memberView: UIView!
+    
 
     var number: Int? {
         didSet {

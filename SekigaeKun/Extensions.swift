@@ -89,3 +89,16 @@ extension NibInstantiatable where Self: UIView {
         return nib.instantiate(withOwner: ownerOrNil, options: nil)[0] as! Self
     }
 }
+
+
+
+public extension Array {
+    public mutating func shuffle() {
+        let n: Int = self.count
+        for _ in 0..<n {
+            sort { (_,_) in arc4random() < arc4random() }
+        }
+    }
+
+}
+

@@ -12,15 +12,10 @@ class MemberView: UIView {
 
     @IBOutlet weak var nameLabel: UILabel!
 
-    let member: Member
-
-    init(frame: CGRect, member: Member) {
-        self.member = member
-        super.init(frame: frame)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    var member: Member? {
+        didSet {
+            self.nameLabel.text = member!.name
+        }
     }
 
 }
