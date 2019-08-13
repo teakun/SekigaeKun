@@ -61,13 +61,13 @@ extension UICollectionView {
         cellTypes.forEach { register(cellType: $0) }
     }
 
-    func register<T: UICollectionReusableView>(reusableViewType: T.Type, of kind: String = UICollectionElementKindSectionHeader) {
+    func register<T: UICollectionReusableView>(reusableViewType: T.Type, of kind: String = UICollectionView.elementKindSectionHeader) {
         let className = reusableViewType.className
         let nib = UINib(nibName: className, bundle: nil)
         register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
     }
 
-    func register<T: UICollectionReusableView>(reusableViewTypes: [T.Type], kind: String = UICollectionElementKindSectionHeader) {
+    func register<T: UICollectionReusableView>(reusableViewTypes: [T.Type], kind: String = UICollectionView.elementKindSectionHeader) {
         reusableViewTypes.forEach { register(reusableViewType: $0, of: kind) }
     }
 
@@ -75,7 +75,7 @@ extension UICollectionView {
         return dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as! T
     }
 
-    func dequeueReusableView<T: UICollectionReusableView>(with type: T.Type, for indexPath: IndexPath, of kind: String = UICollectionElementKindSectionHeader) -> T {
+    func dequeueReusableView<T: UICollectionReusableView>(with type: T.Type, for indexPath: IndexPath, of kind: String = UICollectionView.elementKindSectionHeader) -> T {
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: type.className, for: indexPath) as! T
     }
 }
