@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SekigaeViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class SekigaeViewController: UIViewController {
     private let memberViewWidth: CGFloat = 50
     private let seatNameHeight: CGFloat = 20
     
+    var audioPlayer: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isTranslucent = false
@@ -26,7 +29,6 @@ class SekigaeViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("viewDidAppear")
         prepareSeatView()
     }
 
@@ -35,13 +37,21 @@ class SekigaeViewController: UIViewController {
     }
 
     func prepareSeatView() {
-        seatViews.filter{ $0.number! > self.manager.members.count}
-                 .forEach{
-            $0.removeFromSuperview()
-            seatViews.remove(at: $0.number!)
-        }
+        
+        memberViews.forEach{ $0.removeFromSuperview() }
+        memberViews = []
+        
 
-        for i in seatViews.count..<manager.members.count {
+        if manager.attendMember.count == seatViews.count {
+            return
+        }
+        
+        seatViews.forEach {
+            $0.removeFromSuperview()
+        }
+        seatViews.removeAll()
+
+        for i in seatViews.count..<manager.attendMember.count {
             let seat = SeatView.instantiate()
             seat.number = i
             seat.frame = CGRect(x: CGFloat(i*10), y: CGFloat(i*10), width: memberViewWidth, height: memberViewWidth+CGFloat(20))
@@ -55,22 +65,23 @@ class SekigaeViewController: UIViewController {
     }
 
     @IBAction func didTouchUpInsideSekigaeButton(_ sender: UIButton) {
-
-        let members = manager.members
-
-        if memberViews.count != seatViews.count {
-            memberViews.forEach{ $0.removeFromSuperview() }
-            memberViews = []
-
-            members.forEach{
-                let memberView = MemberView.instantiate()
-                memberView.frame = CGRect(origin: CGPoint(x: (self.view.frame.width - memberViewWidth) / 2, y:  (self.view.frame.height - memberViewWidth) / 2), size: CGSize(width: memberViewWidth, height: memberViewWidth))
-                memberView.member = $0
-                self.view.addSubview(memberView)
-                memberViews.append(memberView)
-            }
+        playDrumroll()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
+            self.sekigae()
         }
-
+    }
+    
+    private func sekigae() {
+        let members = manager.attendMember
+        
+        members.forEach{
+            let memberView = MemberView.instantiate()
+            memberView.frame = CGRect(origin: CGPoint(x: (self.view.frame.width - memberViewWidth) / 2, y:  (self.view.frame.height - memberViewWidth) / 2), size: CGSize(width: memberViewWidth, height: memberViewWidth))
+            memberView.member = $0
+            self.view.addSubview(memberView)
+            memberViews.append(memberView)
+        }
+        
         memberViews.shuffle()
         
         for (i, view) in memberViews.enumerated() {
@@ -80,48 +91,21 @@ class SekigaeViewController: UIViewController {
                 view.frame.origin.y = self.seatViews[i].frame.origin.y + self.seatNameHeight
             })
         }
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+extension SekigaeViewController: AVAudioPlayerDelegate {
+    func playDrumroll() {
+        guard let path = Bundle.main.path(forResource: "drumroll", ofType: "mp3") else {
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            audioPlayer.delegate = self
+            audioPlayer.volume = 1.0
+            audioPlayer.play()
+        } catch {
+        }
+    }
+}
+
