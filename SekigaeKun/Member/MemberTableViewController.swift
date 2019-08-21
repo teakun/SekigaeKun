@@ -21,7 +21,7 @@ class MemberTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = dismissButton
         
         self.tableView.register(cellType: MemberTableViewCell.self)
-        tableView.rowHeight = 50
+        tableView.rowHeight = 60
     }
 
     override func didReceiveMemoryWarning() {
