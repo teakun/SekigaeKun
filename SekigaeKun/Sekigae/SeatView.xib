@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,41 +13,48 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="ltK-4F-qGk" customClass="SeatView" customModule="SekigaeKun" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="104" height="135"/>
+            <rect key="frame" x="0.0" y="0.0" width="279" height="217"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc0-dV-43e" userLabel="seatLabel">
-                    <rect key="frame" x="0.0" y="0.0" width="104" height="31"/>
+                    <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
                     <color key="backgroundColor" red="0.96631283063635798" green="1" blue="0.88229263523769685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoc-sj-c1H" userLabel="memberView">
-                    <rect key="frame" x="0.0" y="31" width="104" height="104"/>
-                    <color key="backgroundColor" red="0.88066027920000001" green="1" blue="0.88516676429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="qoc-sj-c1H" secondAttribute="height" multiplier="1:1" id="cGG-b4-7KQ"/>
-                    </constraints>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQy-0P-Abh">
+                    <rect key="frame" x="0.0" y="43.5" width="279" height="65"/>
+                    <color key="backgroundColor" red="0.88279529940833446" green="1" blue="0.95859658725480834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-dJ-2v9">
+                    <rect key="frame" x="0.0" y="152" width="279" height="65"/>
+                    <color key="backgroundColor" red="0.94169866620611375" green="1" blue="0.89114281786849636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="qoc-sj-c1H" firstAttribute="top" secondItem="xc0-dV-43e" secondAttribute="bottom" id="LEc-LZ-VNc"/>
+                <constraint firstItem="cyC-dJ-2v9" firstAttribute="trailing" secondItem="9qQ-cf-D4O" secondAttribute="trailing" id="2dg-Js-1X9"/>
+                <constraint firstItem="EQy-0P-Abh" firstAttribute="height" secondItem="ltK-4F-qGk" secondAttribute="height" multiplier="0.3" id="3FN-3F-lph"/>
+                <constraint firstItem="9qQ-cf-D4O" firstAttribute="trailing" secondItem="EQy-0P-Abh" secondAttribute="trailing" id="Hhq-i2-tZI"/>
+                <constraint firstItem="9qQ-cf-D4O" firstAttribute="bottom" secondItem="cyC-dJ-2v9" secondAttribute="bottom" id="Oz0-sc-kpV"/>
+                <constraint firstItem="EQy-0P-Abh" firstAttribute="top" secondItem="xc0-dV-43e" secondAttribute="bottom" id="RTC-xT-9vf"/>
                 <constraint firstAttribute="trailing" secondItem="xc0-dV-43e" secondAttribute="trailing" id="b7a-uE-bzM"/>
-                <constraint firstItem="qoc-sj-c1H" firstAttribute="leading" secondItem="ltK-4F-qGk" secondAttribute="leading" id="grW-OP-uS5"/>
+                <constraint firstItem="xc0-dV-43e" firstAttribute="height" secondItem="ltK-4F-qGk" secondAttribute="height" multiplier="0.2" id="bHt-OU-YBB"/>
+                <constraint firstItem="cyC-dJ-2v9" firstAttribute="leading" secondItem="9qQ-cf-D4O" secondAttribute="leading" id="cJd-bd-K3R"/>
+                <constraint firstItem="EQy-0P-Abh" firstAttribute="leading" secondItem="9qQ-cf-D4O" secondAttribute="leading" id="e30-fb-4TH"/>
                 <constraint firstItem="xc0-dV-43e" firstAttribute="top" secondItem="ltK-4F-qGk" secondAttribute="top" id="iUb-k6-DHQ"/>
-                <constraint firstAttribute="bottom" secondItem="qoc-sj-c1H" secondAttribute="bottom" id="ni7-R2-2U1"/>
+                <constraint firstItem="cyC-dJ-2v9" firstAttribute="height" secondItem="ltK-4F-qGk" secondAttribute="height" multiplier="0.3" id="phX-0n-kCF"/>
                 <constraint firstItem="xc0-dV-43e" firstAttribute="leading" secondItem="ltK-4F-qGk" secondAttribute="leading" id="rJq-5s-fEi"/>
-                <constraint firstAttribute="trailing" secondItem="qoc-sj-c1H" secondAttribute="trailing" id="s9w-Ww-XWk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="9qQ-cf-D4O"/>
             <connections>
-                <outlet property="memberView" destination="qoc-sj-c1H" id="BfF-DF-WTQ"/>
+                <outlet property="firstMemberView" destination="EQy-0P-Abh" id="sSh-Ya-M0G"/>
                 <outlet property="seatLabel" destination="xc0-dV-43e" id="BJx-Jb-1RY"/>
+                <outlet property="secondMemberView" destination="cyC-dJ-2v9" id="BdT-Xu-OTG"/>
             </connections>
-            <point key="canvasLocation" x="-320" y="-335"/>
+            <point key="canvasLocation" x="-604" y="-196.55172413793105"/>
         </view>
     </objects>
 </document>

@@ -11,15 +11,16 @@ import UIKit
 class SeatView: UIView {
 
     @IBOutlet weak var seatLabel: UILabel!
-    @IBOutlet weak var memberView: UIView!
     
-
-    var number: Int? {
-        didSet {
-            seatLabel.text = String(number!)
-        }
+    @IBOutlet weak var firstMemberView: UIView!
+    @IBOutlet weak var secondMemberView: UIView!
+    
+    var seat: Seat?
+    func set(seat: Seat) {
+        self.seat = seat
+        seatLabel.text = seat.type.rawValue
     }
-
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
 
