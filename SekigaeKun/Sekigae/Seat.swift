@@ -25,6 +25,22 @@ class Seat {
         self.type = type
     }
     
+    func swap(target: Member, new: Member) {
+        if (member1 === target && member2 === new) || (member1 === new && member2 === target) {
+            let tmp = member1
+            member1 = member2
+            member2 = tmp
+        } else if member1 === target {
+            member1 = new
+        } else if member2 === target {
+            member2 = new
+        } else if member1 === new {
+            member1 = target
+        } else if member2 === new {
+            member2 = target
+        }
+    }
+    
     @discardableResult func setMember(member: Member) -> Bool {
         if member1 == nil {
             member1 = member

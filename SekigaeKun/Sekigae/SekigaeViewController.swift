@@ -12,14 +12,19 @@ import AVFoundation
 class SekigaeViewController: UIViewController {
 
     private var manager = MemberManager.sharedInstance
+    private var seats: [Seat] = []
     private var seatViews: [SeatView] = []
     private var memberViews: [MemberView] = []
 
     private let memberViewWidth: CGFloat = 50
     private let seatNameHeight: CGFloat = 20
+    
+    private var didSekigae: Bool = false
+    private var selectedMember: Member?
     let col: Int = 2
     
     var audioPlayer: AVAudioPlayer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +43,13 @@ class SekigaeViewController: UIViewController {
     }
 
     func prepareSeatView() {
-        let seats = SekigaeStrategy.prepareSeat(members: MemberManager.sharedInstance.attendMember)
-        print(seats)
+        didSekigae = false
+        seats = SekigaeStrategy.prepareSeat(members: MemberManager.sharedInstance.attendMember)
         seatViews.forEach { $0.removeFromSuperview() }
         seatViews = []
+        
+        memberViews.forEach { $0.removeFromSuperview() }
+        memberViews = []
         
         for (index, seat) in seats.enumerated() {
             let seatView = SeatView.instantiate()
@@ -64,23 +72,34 @@ class SekigaeViewController: UIViewController {
     }
     
     private func sekigae() {
-
-        
         let currentSeats = seatViews.compactMap{ $0.seat }
         let members = manager.attendMember
         
         SekigaeStrategy.sekigae(members: members, seats: currentSeats)
 
-        members.forEach{
+        if !didSekigae {
+            didSekigae = true
+            moveMemberViewToStartPosition()
+        }
+
+        moveMemberViewToTargetPosition()
+    }
+    
+    private func moveMemberViewToStartPosition() {
+        manager.attendMember.forEach{
             let memberView = MemberView.instantiate()
             memberView.frame = CGRect(origin: CGPoint(x: (self.view.frame.width - memberViewWidth) / 2,
                                                       y:  (self.view.frame.height - memberViewWidth) / 2),
                                       size: calcMemberSize())
-            memberView.member = $0
+            memberView.set(member: $0) { member in
+                self.selectMemberView(member: member)
+            }
             self.view.addSubview(memberView)
             memberViews.append(memberView)
         }
-        
+    }
+    
+    private func moveMemberViewToTargetPosition() {
         for memberView in memberViews {
             var targetView: UIView?
             guard let member = memberView.member else { return }
@@ -98,8 +117,20 @@ class SekigaeViewController: UIViewController {
             UIView.animate(withDuration: 0.3) {
                 memberView.frame = targetFrame
             }
-            
-        }        
+        }
+    }
+    
+    private func selectMemberView(member: Member) {
+        if let selected = selectedMember {
+            seats.forEach {
+                $0.swap(target: selected, new: member)
+            }
+            moveMemberViewToTargetPosition()
+            memberViews.forEach{ $0.deselect() }
+            selectedMember = nil
+        } else {
+            selectedMember = member
+        }
     }
     
     private func calcSeatFrame(index: Int) -> CGRect {
