@@ -42,6 +42,7 @@ class MemberTableViewCell: UITableViewCell {
     
     func update() {
         guard let member = member else { return }
+        nameLabel.text = member.name
         if member.attend {
             attendButton.backgroundColor = .carrot
         } else {

@@ -21,6 +21,19 @@ class SeatView: UIView {
         seatLabel.text = seat.type.rawValue
     }
     
+    func returnTargetView(from member: Member) -> UIView? {
+        if member === seat?.member1 {
+            return firstMemberView
+        } else if member === seat?.member2 {
+            return secondMemberView
+        } else {
+            return nil
+        }
+    }
+    
+    
+    
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
 
