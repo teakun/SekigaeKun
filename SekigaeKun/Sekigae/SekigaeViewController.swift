@@ -53,6 +53,7 @@ class SekigaeViewController: UIViewController {
         
         for (index, seat) in seats.enumerated() {
             let seatView = SeatView.instantiate()
+            seatView.delegate = self
             seatView.set(seat: seat)
             seatView.frame = calcSeatFrame(index: index)
             seatViews.append(seatView)
@@ -160,6 +161,29 @@ class SekigaeViewController: UIViewController {
     }
     
 }
+
+extension SekigaeViewController: SeatViewDelegate {
+    func didMove(seatView view: SeatView) {
+        for memberView in memberViews {
+            var targetView: UIView?
+            guard let member = memberView.member else { return }
+            
+            for seat in seatViews {
+                if let view = seat.returnTargetView(from: member) {
+                    targetView = view
+                }
+            }
+            
+            guard let target = targetView else { return }
+            
+            let targetFrame = target.convert(target.bounds, to: self.view)
+            
+            memberView.frame = targetFrame
+            
+        }
+    }
+}
+
 
 extension SekigaeViewController: AVAudioPlayerDelegate {
     func playDrumroll() {

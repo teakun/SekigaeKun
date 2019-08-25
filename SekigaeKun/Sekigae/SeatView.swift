@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol SeatViewDelegate: class {
+    func didMove(seatView view: SeatView)
+}
+
 class SeatView: UIView {
 
     @IBOutlet weak var seatLabel: UILabel!
     
     @IBOutlet weak var firstMemberView: UIView!
     @IBOutlet weak var secondMemberView: UIView!
+    
+    
+    weak var delegate: SeatViewDelegate?
     
     var seat: Seat?
     func set(seat: Seat) {
@@ -31,9 +38,6 @@ class SeatView: UIView {
         }
     }
     
-    
-    
-    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
 
@@ -46,6 +50,7 @@ class SeatView: UIView {
         frame.origin.x += dx
         frame.origin.y += dy
         self.frame = frame
+        delegate?.didMove(seatView: self)
     }
 
 }
