@@ -22,11 +22,11 @@
 		CD1E031820FE405B00148129 /* MemberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1E031720FE405B00148129 /* MemberView.xib */; };
 		CDCE64DD23059B7A0088A1DA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64DB23059B7A0088A1DA /* MemberTableViewCell.swift */; };
 		CDCE64DE23059B7A0088A1DA /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCE64DC23059B7A0088A1DA /* MemberTableViewCell.xib */; };
-		CDCE64E02305AB6E0088A1DA /* drumroll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDCE64DF2305AB6E0088A1DA /* drumroll.mp3 */; };
 		CDCE64E3230D8BB60088A1DA /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64E2230D8BB60088A1DA /* UIColor+.swift */; };
 		CDCE64E6230D962A0088A1DA /* SekigaeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64E5230D962A0088A1DA /* SekigaeStrategy.swift */; };
 		CDCE64E823126F350088A1DA /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64E723126F350088A1DA /* Array+.swift */; };
 		CDCE64EA2312B2040088A1DA /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64E92312B2040088A1DA /* Seat.swift */; };
+		CDCE64EC2312DAB30088A1DA /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDCE64EB2312DAB30088A1DA /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,11 +47,11 @@
 		CD1E031720FE405B00148129 /* MemberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberView.xib; sourceTree = "<group>"; };
 		CDCE64DB23059B7A0088A1DA /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		CDCE64DC23059B7A0088A1DA /* MemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
-		CDCE64DF2305AB6E0088A1DA /* drumroll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drumroll.mp3; sourceTree = "<group>"; };
 		CDCE64E2230D8BB60088A1DA /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		CDCE64E5230D962A0088A1DA /* SekigaeStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekigaeStrategy.swift; sourceTree = "<group>"; };
 		CDCE64E723126F350088A1DA /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		CDCE64E92312B2040088A1DA /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
+		CDCE64EB2312DAB30088A1DA /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				CDCE64E4230D94D80088A1DA /* Sekigae */,
 				CDCE64DA23059B420088A1DA /* Member */,
 				CDCE64E1230D8BA10088A1DA /* Extension */,
-				CDCE64DF2305AB6E0088A1DA /* drumroll.mp3 */,
+				CDCE64EB2312DAB30088A1DA /* sound.mp3 */,
 			);
 			path = SekigaeKun;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 				CDCE64DE23059B7A0088A1DA /* MemberTableViewCell.xib in Resources */,
 				CD1E031220FE2A2400148129 /* SeatView.xib in Resources */,
 				CD1E02FC20FC7C9200148129 /* LaunchScreen.storyboard in Resources */,
-				CDCE64E02305AB6E0088A1DA /* drumroll.mp3 in Resources */,
+				CDCE64EC2312DAB30088A1DA /* sound.mp3 in Resources */,
 				CD1E031820FE405B00148129 /* MemberView.xib in Resources */,
 				CD1E02F920FC7C9200148129 /* Assets.xcassets in Resources */,
 			);

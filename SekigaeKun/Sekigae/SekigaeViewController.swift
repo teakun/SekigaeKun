@@ -66,10 +66,8 @@ class SekigaeViewController: UIViewController {
     }
 
     @IBAction func didTouchUpInsideSekigaeButton(_ sender: UIButton) {
-//        playDrumroll()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
-            self.sekigae()
-//        }
+        playDrumroll()
+        self.sekigae()
     }
     
     private func sekigae() {
@@ -187,7 +185,7 @@ extension SekigaeViewController: SeatViewDelegate {
 
 extension SekigaeViewController: AVAudioPlayerDelegate {
     func playDrumroll() {
-        guard let path = Bundle.main.path(forResource: "drumroll", ofType: "mp3") else {
+        guard let path = Bundle.main.path(forResource: "sound", ofType: "mp3") else {
             return
         }
         do {

@@ -21,6 +21,7 @@ class MemberTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = dismissButton
         
         self.tableView.register(cellType: MemberTableViewCell.self)
+        tableView.allowsSelection = false
         tableView.rowHeight = 60
     }
 
