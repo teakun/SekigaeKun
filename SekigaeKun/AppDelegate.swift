@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
-//        let navigationVC = UINavigationController(rootViewController: SekigaeViewController.instantiate())
         let navigationVC = UINavigationController(rootViewController: SekigaeViewController.instantiate())
         window?.rootViewController = navigationVC
 

@@ -16,15 +16,11 @@ class SekigaeViewController: UIViewController {
     private var seatViews: [SeatView] = []
     private var memberViews: [MemberView] = []
 
-    private let memberViewWidth: CGFloat = 50
-    private let seatNameHeight: CGFloat = 20
-    
     private var didSekigae: Bool = false
     private var selectedMember: Member?
     let col: Int = 2
     
     var audioPlayer: AVAudioPlayer!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,8 +83,8 @@ class SekigaeViewController: UIViewController {
     private func moveMemberViewToStartPosition() {
         manager.attendMember.forEach{
             let memberView = MemberView.instantiate()
-            memberView.frame = CGRect(origin: CGPoint(x: (self.view.frame.width - memberViewWidth) / 2,
-                                                      y:  (self.view.frame.height - memberViewWidth) / 2),
+            memberView.frame = CGRect(origin: CGPoint(x: self.view.frame.width / 2,
+                                                      y:  self.view.frame.height / 2),
                                       size: calcMemberSize())
             memberView.set(member: $0) { member in
                 self.selectMemberView(member: member)
