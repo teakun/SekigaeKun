@@ -2,7 +2,12 @@ import UIKit
 
 class MemberTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapNameLabel))
+            nameLabel.addGestureRecognizer(tapGesture)
+        }
+    }
     
     @IBOutlet weak var attendButton: UIButton! {
         didSet {
@@ -33,11 +38,12 @@ class MemberTableViewCell: UITableViewCell {
     
     
     private var member: Member?
+    private var editHandler: ((Member) -> Void)?
     
-    func set(member: Member) {
+    func set(member: Member, editHandler: ((Member) -> Void)?) {
         self.member = member
+        self.editHandler = editHandler
         update()
-        
     }
     
     func update() {
@@ -76,6 +82,12 @@ class MemberTableViewCell: UITableViewCell {
     @IBAction func didTapSoloButton(_ sender: UIButton) {
         member?.solo.toggle()
         update()
+    }
+    
+    @objc func didTapNameLabel() {
+        if let member = member {
+            editHandler?(member)
+        }
     }
     
 }

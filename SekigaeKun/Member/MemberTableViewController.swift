@@ -62,6 +62,12 @@ class MemberTableViewController: UITableViewController {
         manager.addMember(name: name)
         self.tableView.reloadData()
     }
+    
+    
+    func transitionToEditMember(member: Member) {
+        let vc = MemberEditViewControllerFactory.create(member: member)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     // MARK: - Table view data source
 
@@ -75,7 +81,9 @@ class MemberTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(with: MemberTableViewCell.self, for: indexPath)
-        cell.set(member: manager.members[indexPath.row])
+        cell.set(member: manager.members[indexPath.row]) { [weak self] (member) in
+            self?.transitionToEditMember(member: member)
+        }
         return cell
     }
     
