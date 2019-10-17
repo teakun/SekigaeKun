@@ -58,7 +58,9 @@ class SekigaeViewController: UIViewController {
     }
 
     @objc func didTapMemberButton() {
-        present(UINavigationController(rootViewController: MemberTableViewController()), animated: true, completion: nil)
+        let vc = UINavigationController(rootViewController: MemberTableViewController())
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 
     @IBAction func didTouchUpInsideSekigaeButton(_ sender: UIButton) {

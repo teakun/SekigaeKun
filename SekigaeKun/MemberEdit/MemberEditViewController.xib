@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,19 +29,38 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1c2-yQ-VZR">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1c2-yQ-VZR">
                             <rect key="frame" x="16" y="16" width="88" height="88"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="88" id="COW-i6-jl1"/>
                                 <constraint firstAttribute="height" constant="88" id="K11-w3-wuf"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-BP-Zbw">
+                            <rect key="frame" x="45" y="103" width="31" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="編集"/>
+                            <connections>
+                                <action selector="didTapIconEditButton:" destination="-1" eventType="touchUpInside" id="1B5-2D-Baz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVT-9F-oaL">
+                            <rect key="frame" x="367" y="10" width="31" height="30"/>
+                            <state key="normal" title="編集"/>
+                            <connections>
+                                <action selector="didTapNameEditButton:" destination="-1" eventType="touchUpInside" id="8qT-KN-rZp"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Ffq-XN-IN8" firstAttribute="leading" secondItem="1c2-yQ-VZR" secondAttribute="trailing" constant="16" id="FpV-4v-dk7"/>
+                        <constraint firstItem="yVT-9F-oaL" firstAttribute="centerY" secondItem="Ffq-XN-IN8" secondAttribute="centerY" id="V8F-M1-J60"/>
                         <constraint firstAttribute="height" constant="160" id="YGn-nx-5uh"/>
+                        <constraint firstAttribute="trailing" secondItem="yVT-9F-oaL" secondAttribute="trailing" constant="16" id="aXQ-Km-YDj"/>
                         <constraint firstItem="Ffq-XN-IN8" firstAttribute="top" secondItem="1c2-yQ-VZR" secondAttribute="top" id="h0I-jQ-NW0"/>
+                        <constraint firstItem="yVT-9F-oaL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ffq-XN-IN8" secondAttribute="trailing" constant="8" id="mjQ-qO-5cx"/>
                         <constraint firstItem="1c2-yQ-VZR" firstAttribute="leading" secondItem="NkU-6b-WiA" secondAttribute="leading" constant="16" id="we0-hP-ru9"/>
                         <constraint firstItem="1c2-yQ-VZR" firstAttribute="top" secondItem="NkU-6b-WiA" secondAttribute="top" constant="16" id="zLO-oU-tQw"/>
                     </constraints>

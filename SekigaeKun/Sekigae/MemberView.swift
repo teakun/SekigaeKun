@@ -12,6 +12,8 @@ class MemberView: UIView {
 
     @IBOutlet weak var nameLabel: UILabel!
 
+    @IBOutlet weak var iconImageView: UIImageView!
+    
     var member: Member?
     var handler: ((Member) -> Void)?
     
@@ -19,6 +21,7 @@ class MemberView: UIView {
         self.member = member
         self.handler = handler
         self.nameLabel.text = member.name
+        self.iconImageView.image = member.icon
     }
 
     @IBAction func didTapButton(_ sender: UIButton) {
