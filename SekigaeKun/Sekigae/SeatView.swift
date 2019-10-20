@@ -22,6 +22,12 @@ class SeatView: UIView {
     
     weak var delegate: SeatViewDelegate?
     
+    override func draw(_ rect: CGRect) {
+        layer.cornerRadius = 4
+        clipsToBounds = true
+    }
+    
+    
     var seat: Seat?
     func set(seat: Seat) {
         self.seat = seat
