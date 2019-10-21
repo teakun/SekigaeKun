@@ -11,7 +11,6 @@
 		CD1E02F920FC7C9200148129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1E02F820FC7C9200148129 /* Assets.xcassets */; };
 		CD1E02FC20FC7C9200148129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1E02FA20FC7C9200148129 /* LaunchScreen.storyboard */; };
 		CD1E030620FCD63100148129 /* SekigaeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030520FCD63100148129 /* SekigaeViewController.swift */; };
-		CD1E030820FCD69000148129 /* SekigaeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1E030720FCD69000148129 /* SekigaeViewController.storyboard */; };
 		CD1E030A20FCD8E100148129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030920FCD8E100148129 /* Extensions.swift */; };
 		CD1E030C20FCD92C00148129 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030B20FCD92C00148129 /* Member.swift */; };
 		CD1E030E20FCD9DA00148129 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */; };
@@ -23,6 +22,8 @@
 		CD483B382338F0C4004D3033 /* MemberEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD483B362338F0C4004D3033 /* MemberEditViewController.swift */; };
 		CD483B392338F0C4004D3033 /* MemberEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD483B372338F0C4004D3033 /* MemberEditViewController.xib */; };
 		CD483B3B2338F680004D3033 /* MemberEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD483B3A2338F680004D3033 /* MemberEditPresenter.swift */; };
+		CDA5D8AF235DF8310059F82D /* SekigaePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D8AE235DF8310059F82D /* SekigaePresenter.swift */; };
+		CDA5D8B1235DF9CE0059F82D /* SekigaeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA5D8B0235DF9CE0059F82D /* SekigaeViewController.xib */; };
 		CDCE64DD23059B7A0088A1DA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64DB23059B7A0088A1DA /* MemberTableViewCell.swift */; };
 		CDCE64DE23059B7A0088A1DA /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCE64DC23059B7A0088A1DA /* MemberTableViewCell.xib */; };
 		CDCE64E3230D8BB60088A1DA /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64E2230D8BB60088A1DA /* UIColor+.swift */; };
@@ -39,7 +40,6 @@
 		CD1E02FB20FC7C9200148129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1E02FD20FC7C9200148129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD1E030520FCD63100148129 /* SekigaeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekigaeViewController.swift; sourceTree = "<group>"; };
-		CD1E030720FCD69000148129 /* SekigaeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SekigaeViewController.storyboard; sourceTree = "<group>"; };
 		CD1E030920FCD8E100148129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CD1E030B20FCD92C00148129 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		CD1E030D20FCD9DA00148129 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		CD483B362338F0C4004D3033 /* MemberEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEditViewController.swift; sourceTree = "<group>"; };
 		CD483B372338F0C4004D3033 /* MemberEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberEditViewController.xib; sourceTree = "<group>"; };
 		CD483B3A2338F680004D3033 /* MemberEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEditPresenter.swift; sourceTree = "<group>"; };
+		CDA5D8AE235DF8310059F82D /* SekigaePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekigaePresenter.swift; sourceTree = "<group>"; };
+		CDA5D8B0235DF9CE0059F82D /* SekigaeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SekigaeViewController.xib; sourceTree = "<group>"; };
 		CDCE64DB23059B7A0088A1DA /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		CDCE64DC23059B7A0088A1DA /* MemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
 		CDCE64E2230D8BB60088A1DA /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
@@ -139,13 +141,14 @@
 			isa = PBXGroup;
 			children = (
 				CD1E030520FCD63100148129 /* SekigaeViewController.swift */,
-				CD1E030720FCD69000148129 /* SekigaeViewController.storyboard */,
 				CD1E031120FE2A2400148129 /* SeatView.xib */,
 				CD1E031320FE2A4500148129 /* SeatView.swift */,
 				CD1E031520FE3FBF00148129 /* MemberView.swift */,
 				CD1E031720FE405B00148129 /* MemberView.xib */,
 				CDCE64E5230D962A0088A1DA /* SekigaeStrategy.swift */,
 				CDCE64E92312B2040088A1DA /* Seat.swift */,
+				CDA5D8AE235DF8310059F82D /* SekigaePresenter.swift */,
+				CDA5D8B0235DF9CE0059F82D /* SekigaeViewController.xib */,
 			);
 			path = Sekigae;
 			sourceTree = "<group>";
@@ -209,7 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1E030820FCD69000148129 /* SekigaeViewController.storyboard in Resources */,
+				CDA5D8B1235DF9CE0059F82D /* SekigaeViewController.xib in Resources */,
 				CDCE64DE23059B7A0088A1DA /* MemberTableViewCell.xib in Resources */,
 				CD483B392338F0C4004D3033 /* MemberEditViewController.xib in Resources */,
 				CD1E031220FE2A2400148129 /* SeatView.xib in Resources */,
@@ -229,6 +232,7 @@
 			files = (
 				CDCE64EA2312B2040088A1DA /* Seat.swift in Sources */,
 				CD483B3B2338F680004D3033 /* MemberEditPresenter.swift in Sources */,
+				CDA5D8AF235DF8310059F82D /* SekigaePresenter.swift in Sources */,
 				CD1E030620FCD63100148129 /* SekigaeViewController.swift in Sources */,
 				CD483B382338F0C4004D3033 /* MemberEditViewController.swift in Sources */,
 				CDCE64E823126F350088A1DA /* Array+.swift in Sources */,

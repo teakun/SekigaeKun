@@ -17,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
+    
 
-        let navigationVC = UINavigationController(rootViewController: SekigaeViewController.instantiate())
+//        let navigationVC = UINavigationController(rootViewController: SekigaeViewController.instantiate())
+        let navigationVC = UINavigationController(rootViewController: SekigaeViewControllerFactory.create())
         window?.rootViewController = navigationVC
 
         return true

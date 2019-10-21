@@ -27,7 +27,6 @@ class SeatView: UIView {
         clipsToBounds = true
     }
     
-    
     var seat: Seat?
     func set(seat: Seat) {
         self.seat = seat
