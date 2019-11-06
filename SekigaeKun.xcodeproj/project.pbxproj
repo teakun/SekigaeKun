@@ -24,6 +24,8 @@
 		CD483B3B2338F680004D3033 /* MemberEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD483B3A2338F680004D3033 /* MemberEditPresenter.swift */; };
 		CDA5D8AF235DF8310059F82D /* SekigaePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D8AE235DF8310059F82D /* SekigaePresenter.swift */; };
 		CDA5D8B1235DF9CE0059F82D /* SekigaeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA5D8B0235DF9CE0059F82D /* SekigaeViewController.xib */; };
+		CDC172332373454F00A6C677 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDC172322373454F00A6C677 /* README.md */; };
+		CDC172352373458D00A6C677 /* asset in Resources */ = {isa = PBXBuildFile; fileRef = CDC172342373458D00A6C677 /* asset */; };
 		CDCE64DD23059B7A0088A1DA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64DB23059B7A0088A1DA /* MemberTableViewCell.swift */; };
 		CDCE64DE23059B7A0088A1DA /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCE64DC23059B7A0088A1DA /* MemberTableViewCell.xib */; };
 		CDCE64E3230D8BB60088A1DA /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE64E2230D8BB60088A1DA /* UIColor+.swift */; };
@@ -53,6 +55,8 @@
 		CD483B3A2338F680004D3033 /* MemberEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEditPresenter.swift; sourceTree = "<group>"; };
 		CDA5D8AE235DF8310059F82D /* SekigaePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekigaePresenter.swift; sourceTree = "<group>"; };
 		CDA5D8B0235DF9CE0059F82D /* SekigaeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SekigaeViewController.xib; sourceTree = "<group>"; };
+		CDC172322373454F00A6C677 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CDC172342373458D00A6C677 /* asset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = asset; sourceTree = "<group>"; };
 		CDCE64DB23059B7A0088A1DA /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		CDCE64DC23059B7A0088A1DA /* MemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
 		CDCE64E2230D8BB60088A1DA /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		CD1E02E520FC7C8E00148129 = {
 			isa = PBXGroup;
 			children = (
+				CDC172342373458D00A6C677 /* asset */,
+				CDC172322373454F00A6C677 /* README.md */,
 				CD1E02F020FC7C8E00148129 /* SekigaeKun */,
 				CD1E02EF20FC7C8E00148129 /* Products */,
 			);
@@ -217,7 +223,9 @@
 				CD483B392338F0C4004D3033 /* MemberEditViewController.xib in Resources */,
 				CD1E031220FE2A2400148129 /* SeatView.xib in Resources */,
 				CD1E02FC20FC7C9200148129 /* LaunchScreen.storyboard in Resources */,
+				CDC172352373458D00A6C677 /* asset in Resources */,
 				CDCE64EC2312DAB30088A1DA /* sound.mp3 in Resources */,
+				CDC172332373454F00A6C677 /* README.md in Resources */,
 				CD1E031820FE405B00148129 /* MemberView.xib in Resources */,
 				CD1E02F920FC7C9200148129 /* Assets.xcassets in Resources */,
 			);
